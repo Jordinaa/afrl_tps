@@ -18,11 +18,11 @@
 
 enum
 {
-    IADS__ROLL_RATE, 
+    IADS__ROLL_RATE,
     IADS__PITCH_RATE,
-    IADS__YAW_RATE, 
-    IADS__ROLL, 
-    IADS__PITCH, 
+    IADS__YAW_RATE,
+    IADS__ROLL,
+    IADS__PITCH,
     IADS__HEADING,
     IADS__AIRSPEED,
     IADS__ALTITUDE,
@@ -33,7 +33,7 @@ enum
 //implement iads protocol
 //need to set this ip of local host
 // IADSInterface iads( "192.168.231.110", 1500, IADS__TOTAL);
-IADSInterface iads( "10.3.20.62", 1500, IADS__TOTAL);
+IADSInterface iads( "10.3.21.10", 1500, IADS__TOTAL);
 
 int main(int argc, char **argv) 
 {
