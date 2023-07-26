@@ -1,0 +1,3 @@
+/home/taranto/IADSInterface/build/CMakeFiles/rebuild_cache.dir
+/home/taranto/IADSInterface/build/CMakeFiles/edit_cache.dir
+/home/taranto/IADSInterface/build/CMakeFiles/IADSInterface.dir

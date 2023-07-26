@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="afrl_ros" type="mavlink_ros_wrapper.py" name="mavlink_ros_wrapper" respawn="true">
+    </node>
+
+    <node pkg="afrl_ros" type="ros_IADS" name="ros_IADS" respawn="true">
+        <!-- <param name="gcs_url" value="$(arg mavlink_bridge_url)" /> -->
+    </node>
+
+</launch>
