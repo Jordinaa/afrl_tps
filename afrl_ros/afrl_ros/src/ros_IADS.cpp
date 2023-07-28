@@ -3,7 +3,7 @@
 #include <IADSInterface.h>
 #include <uas_info.h>
 // https://mavsdk.mavlink.io/main/en/cpp/api_reference/ for existing telem data for IADS
-
+using namespace std;
 
 // enum
 // {
@@ -26,7 +26,7 @@ enum
     IADS__HEADING,
     IADS__AIRSPEED,
     IADS__ALTITUDE,
-    IADS__TOTAL
+    IADS__TOTAL = 33
 };
 
 
@@ -42,16 +42,15 @@ int main(int argc, char **argv)
     
     ros:: Rate rate(100);
 
-    std::string ip_address; 
-    //std::string ip = nh.getParam("iads_broker_ip", ip_address);
-    //std::cout<<"ip is " << nh.getParam("iads_broker_ip", ip_address) << std::endl;
-    
+    string ip_address; 
+    //string ip = nh.getParam("iads_broker_ip", ip_address);
+    cout<<"ip is " << nh.getParam("iads_broker_ip", ip_address) << endl;
     //instantiate UASInfo object 
     UASInfo uas_info(&nh);
 
     while (ros::ok())
     {
-        std::cout<<"uas rpy deg is " << uas_info.attitude_deg << std::endl;
+        cout<<"uas rpy deg is " << uas_info.attitude_deg << endl;
         iads.setParameter(IADS__ROLL_RATE, uas_info.attitude_rate_deg[0])
             .setParameter(IADS__PITCH_RATE, uas_info.attitude_rate_deg[1])
             .setParameter(IADS__YAW_RATE, uas_info.attitude_rate_deg[2])
@@ -61,7 +60,7 @@ int main(int argc, char **argv)
             .setParameter(IADS__AIRSPEED, uas_info.vfr[1])
             .setParameter(IADS__ALTITUDE, uas_info.vfr[2])
         .sendData();
-        // std::cout<<"sending message"<<std::endl;
+        // cout<<"sending message"<<endl;
         ros::spinOnce();
         rate.sleep();
     }

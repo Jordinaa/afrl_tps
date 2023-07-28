@@ -148,6 +148,7 @@ if __name__=='__main__':
             print("message is", message)
 
             if "FREQ_SWEEP" in message:
+                print('mavros set namespace')
                 mavros.set_namespace()
                 if fc_listener.is_msg_correct(message):
 

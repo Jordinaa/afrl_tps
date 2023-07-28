@@ -122,7 +122,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  INCLUDE_DIRS include
-   CATKIN_DEPENDS 
+   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
 #  LIBRARIES afrl_ros
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
@@ -130,12 +130,12 @@ catkin_package(
 
 #include directories for headers
 include_directories(
-  include
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   ${Boost_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
-  /home/taranto/IADSInterface/support
+  # /home/taranto/IADSInterface
 )
 
 # find other library dendencies needed
@@ -186,7 +186,10 @@ find_library(IADSINTERFACE IADSInterface PATHS /home/taranto/IADSInterface/build
 ########################################################################################
 add_executable(ros_IADS src/ros_IADS.cpp src/uas_info.cpp)
 add_dependencies(ros_IADS ${catkin_EXPORTED_TARGETS})
-target_link_libraries(ros_IADS ${catkin_LIBRARIES} ${IADSINTERFACE})
+target_link_libraries(ros_IADS 
+    ${catkin_LIBRARIES} 
+    ${IADSINTERFACE}
+)
 ########################################################################################
 
 #############

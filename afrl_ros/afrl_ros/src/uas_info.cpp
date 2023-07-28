@@ -2,6 +2,7 @@
 #include <tf/tf.h>
 #include <Eigen/Dense>
 
+using namespace std;
 
 UASInfo::UASInfo(ros::NodeHandle* nh)
 {
@@ -69,6 +70,7 @@ void UASInfo::vfr_cb(const afrl_ros::HeadingAirspeedAltitudeIADS::ConstPtr& msg)
     vfr[0] = msg-> heading;
     vfr[1] = msg-> airspeed;
     vfr[2] = msg-> altitude;
+    cout << msg->heading << endl;
 }
 
 float UASInfo::rad2deg(float rad_val)
