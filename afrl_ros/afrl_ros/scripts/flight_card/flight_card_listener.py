@@ -118,8 +118,8 @@ if __name__=='__main__':
     # THIS_IP = "10.3.7.205" #this is at airforce
     # THIS_IP = "192.168.231.110" #cell phone
   
-    # THIS_IP = "192.168.1.123" # linksys router
-    THIS_IP = "10.3.20.62" # Simulator SW Wifi
+    THIS_IP = "192.168.1.123" # linksys router
+    # THIS_IP = "10.3.20.62" # Simulator SW Wifi
     
     BUFFSIZE = 1024
 
