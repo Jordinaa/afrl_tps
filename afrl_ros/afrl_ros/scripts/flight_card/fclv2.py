@@ -6,14 +6,8 @@ from xmlrpc.client import boolean
 import threading
 
 import time
-import rospy
-import mavros
-from pymavlink import mavutil
 
-from nav_msgs.msg import Odometry
-from mavros_msgs.msg import HomePosition, WaypointList
-from sensor_msgs.msg import NavSatFix
-from tf.transformations import euler_from_quaternion, quaternion_from_euler
+from pymavlink import mavutil
 
 AIRSPEED_CONFIG = {
     "MINAirspeed": 14,
