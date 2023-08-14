@@ -1,29 +1,33 @@
-float64 roll
-float64 pitch
-float64 yaw
-float64 rollspeed
-float64 pitchspeed
-float64 yawspeed
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
-float64 
+float64 airspeed
+float64 altitude
+float64 latitude
+float64 longitude
+float64 roll_angle
+float64 pitch_angle
+float64 heading
+float64 roll_rate
+float64 pitch_rate
+float64 yaw_rate
+float64 x_accel
+float64 y_accel
+float64 z_accel
+float64 aileron
+float64 elevator
+float64 rudder
+float64 throttle
+float64 flaps
+float64 groundspeed
+float64 lcl_posn_x
+float64 lcl_posn_y
+float64 lcl_posn_z
+float64 lcl_vel_x
+float64 lcl_vel_y
+float64 lcl_vel_z
+float64 climb_rate
+float64 attitude_cmd_q1
+float64 attitude_cmd_q2
+float64 attitude_cmd_q3
+float64 attitude_cmd_q4
+float64 roll_rate_cmd
+float64 pitch_rate_cmd
+float64 yaw_rate_cmd
