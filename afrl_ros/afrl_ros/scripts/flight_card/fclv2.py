@@ -90,6 +90,7 @@ if __name__ == '__main__':
     PORT = 9876
     MAXCONNECTIONS = 2
 
+    # THIS_IP = "192.168.1.123"
     THIS_IP = "192.168.1.123"
     BUFFSIZE = 1024
 
